@@ -1,7 +1,7 @@
-package src.entities;
+package ref.entities;
 
-import src.level.Level;
-import src.level.tiles.Tile;
+import ref.level.Level;
+import ref.level.tiles.Tile;
 
 public abstract class Mob extends Entity {
 

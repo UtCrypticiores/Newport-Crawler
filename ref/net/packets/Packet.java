@@ -1,7 +1,7 @@
-package src.net.packets;
+package ref.net.packets;
 
-import src.net.GameClient;
-import src.net.GameServer;
+import ref.net.GameClient;
+import ref.net.GameServer;
 
 public abstract class Packet {
 

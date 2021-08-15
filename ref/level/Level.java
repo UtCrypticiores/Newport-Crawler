@@ -1,4 +1,4 @@
-package src.level;
+package ref.level;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -8,10 +8,10 @@ import java.util.List;
 
 import javax.imageio.ImageIO;
 
-import src.entities.Entity;
-import src.entities.PlayerMP;
-import src.gfx.Screen;
-import src.level.tiles.Tile;
+import ref.entities.Entity;
+import ref.entities.PlayerMP;
+import ref.gfx.Screen;
+import ref.level.tiles.Tile;
 
 public class Level {
 
@@ -47,11 +47,11 @@ public class Level {
     }
 
     private void loadTiles() {
-        int[] tileColours = this.image.getRGB(0, 0, width, height, null, 0, width);
+        int[] tileColors = this.image.getRGB(0, 0, width, height, null, 0, width);
         for (int y = 0; y < height; y++) {
             for (int x = 0; x < width; x++) {
                 tileCheck: for (Tile t : Tile.tiles) {
-                    if (t != null && t.getLevelColour() == tileColours[x + y * width]) {
+                    if (t != null && t.getLevelColour() == tileColors[x + y * width]) {
                         this.tiles[x + y * width] = t.getId();
                         break tileCheck;
                     }

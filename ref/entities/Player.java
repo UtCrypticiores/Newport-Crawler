@@ -1,17 +1,17 @@
-package src.entities;
+package ref.entities;
 
-import src.Game;
-import src.InputHandler;
-import src.gfx.Colours;
-import src.gfx.Font;
-import src.gfx.Screen;
-import src.level.Level;
-import src.net.packets.Packet02Move;
+import ref.Game;
+import ref.InputHandler;
+import ref.gfx.Colors;
+import ref.gfx.Font;
+import ref.gfx.Screen;
+import ref.level.Level;
+import ref.net.packets.Packet02Move;
 
 public class Player extends Mob {
 
     private InputHandler input;
-    private int colour = Colours.get(-1, 111, 145, 543);
+    private int colour = Colors.get(-1, 111, 145, 543);
     private int scale = 1;
     protected boolean isSwimming = false;
     private int tickCount = 0;
@@ -80,15 +80,15 @@ public class Player extends Mob {
             int waterColour = 0;
             yOffset += 4;
             if (tickCount % 60 < 15) {
-                waterColour = Colours.get(-1, -1, 225, -1);
+                waterColour = Colors.get(-1, -1, 225, -1);
             } else if (15 <= tickCount % 60 && tickCount % 60 < 30) {
                 yOffset -= 1;
-                waterColour = Colours.get(-1, 225, 115, -1);
+                waterColour = Colors.get(-1, 225, 115, -1);
             } else if (30 <= tickCount % 60 && tickCount % 60 < 45) {
-                waterColour = Colours.get(-1, 115, -1, 225);
+                waterColour = Colors.get(-1, 115, -1, 225);
             } else {
                 yOffset -= 1;
-                waterColour = Colours.get(-1, 225, 115, -1);
+                waterColour = Colors.get(-1, 225, 115, -1);
             }
             screen.render(xOffset, yOffset + 3, 0 + 27 * 32, waterColour, 0x00, 1);
             screen.render(xOffset + 8, yOffset + 3, 0 + 27 * 32, waterColour, 0x01, 1);
@@ -105,7 +105,7 @@ public class Player extends Mob {
         }
         if (username != null) {
             Font.render(username, screen, xOffset - ((username.length() - 1) / 2 * 8), yOffset - 10,
-                    Colours.get(-1, -1, -1, 555), 1);
+                    Colors.get(-1, -1, -1, 555), 1);
         }
     }
 

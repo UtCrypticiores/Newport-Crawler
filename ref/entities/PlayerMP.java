@@ -1,9 +1,9 @@
-package src.entities;
+package ref.entities;
 
 import java.net.InetAddress;
 
-import src.InputHandler;
-import src.level.Level;
+import ref.InputHandler;
+import ref.level.Level;
 
 public class PlayerMP extends Player {
 

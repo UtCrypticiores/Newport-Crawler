@@ -1,4 +1,4 @@
-package src.level.tiles;
+package ref.level.tiles;
 
 public class AnimatedTile extends BasicTile {
 

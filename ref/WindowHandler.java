@@ -1,9 +1,9 @@
-package src;
+package ref;
 
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
-import src.net.packets.Packet01Disconnect;
+import ref.net.packets.Packet01Disconnect;
 
 public class WindowHandler implements WindowListener {
 

@@ -1,4 +1,4 @@
-package src;
+package ref;
 
 import java.awt.Canvas;
 import java.awt.Dimension;
@@ -10,14 +10,14 @@ import java.awt.image.DataBufferInt;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-import src.entities.Player;
-import src.entities.PlayerMP;
-import src.gfx.Screen;
-import src.gfx.SpriteSheet;
-import src.level.Level;
-import src.net.GameClient;
-import src.net.GameServer;
-import src.net.packets.Packet00Login;
+import ref.entities.Player;
+import ref.entities.PlayerMP;
+import ref.gfx.Screen;
+import ref.gfx.SpriteSheet;
+import ref.level.Level;
+import ref.net.GameClient;
+import ref.net.GameServer;
+import ref.net.packets.Packet00Login;
 
 public class Game extends Canvas implements Runnable {
 
@@ -39,7 +39,7 @@ public class Game extends Canvas implements Runnable {
 
     private BufferedImage image = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_INT_RGB);
     private int[] pixels = ((DataBufferInt) image.getRaster().getDataBuffer()).getData();
-    private int[] colours = new int[6 * 6 * 6];
+    private int[] colors = new int[6 * 6 * 6];
 
     private Screen screen;
     public InputHandler input;
@@ -63,7 +63,7 @@ public class Game extends Canvas implements Runnable {
                     int gg = (g * 255 / 5);
                     int bb = (b * 255 / 5);
 
-                    colours[index++] = rr << 16 | gg << 8 | bb;
+                    colors[index++] = rr << 16 | gg << 8 | bb;
                 }
             }
         }
@@ -175,7 +175,7 @@ public class Game extends Canvas implements Runnable {
             for (int x = 0; x < screen.width; x++) {
                 int colourCode = screen.pixels[x + y * screen.width];
                 if (colourCode < 255)
-                    pixels[x + y * WIDTH] = colours[colourCode];
+                    pixels[x + y * WIDTH] = colors[colourCode];
             }
         }
 

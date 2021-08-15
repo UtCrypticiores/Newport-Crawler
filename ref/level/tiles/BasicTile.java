@@ -1,7 +1,7 @@
-package src.level.tiles;
+package ref.level.tiles;
 
-import src.gfx.Screen;
-import src.level.Level;
+import ref.gfx.Screen;
+import ref.level.Level;
 
 public class BasicTile extends Tile {
 

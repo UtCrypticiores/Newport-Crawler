@@ -1,4 +1,4 @@
-package src.net;
+package ref.net;
 
 import java.io.IOException;
 import java.net.DatagramPacket;
@@ -7,13 +7,13 @@ import java.net.InetAddress;
 import java.net.SocketException;
 import java.net.UnknownHostException;
 
-import src.Game;
-import src.entities.PlayerMP;
-import src.net.packets.Packet;
-import src.net.packets.Packet.PacketTypes;
-import src.net.packets.Packet00Login;
-import src.net.packets.Packet01Disconnect;
-import src.net.packets.Packet02Move;
+import ref.Game;
+import ref.entities.PlayerMP;
+import ref.net.packets.Packet;
+import ref.net.packets.Packet.PacketTypes;
+import ref.net.packets.Packet00Login;
+import ref.net.packets.Packet01Disconnect;
+import ref.net.packets.Packet02Move;
 
 public class GameClient extends Thread {
 

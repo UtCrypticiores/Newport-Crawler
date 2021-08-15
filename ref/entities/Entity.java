@@ -1,7 +1,7 @@
-package src.entities;
+package ref.entities;
 
-import src.gfx.Screen;
-import src.level.Level;
+import ref.gfx.Screen;
+import ref.level.Level;
 
 public abstract class Entity {
 

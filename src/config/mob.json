@@ -1,0 +1,11 @@
+[
+	{
+		"name": "Zombie",
+		"type": 4,
+		"spawnRules": [],
+		"health": 4.5,
+		"spriteSheet": "path",
+		"pos": 4,
+		"dropChance": 0.03
+	}
+]

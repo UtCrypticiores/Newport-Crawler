@@ -1,9 +1,9 @@
 package src;
 
-import src.render.render;
+import src.render.Render;
 
-public class launcher {
+public class Launcher {
     public static void launch(){
-        render.makeJFrame("Newport Crawler",600,400,true);
+        Render.makeJFrame("Newport Crawler",600,400,true);
     }
 }

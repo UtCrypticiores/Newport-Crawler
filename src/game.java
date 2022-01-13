@@ -1,7 +1,8 @@
 package src;
 
-public class game {
+import src.Update;
+public class Game {
     public static void main(String[] args) {
-       update.check();
+      Update.check();
     }
 }

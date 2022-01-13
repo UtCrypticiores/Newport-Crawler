@@ -1,15 +1,15 @@
 package src;
 
-import src.render.render;
+import src.render.Render;
+import src.Launcher;
 
-public class update {
-    private static boolean needed = false;
-
+public class Update {
     public static void check() {
+        boolean needed = false;
         if (needed) {
-            render.makeJFrame("Updater - Newport Crawler", 600, 400, false);
+            Render.makeJFrame("Updater - Newport Crawler", 600, 400, false);
         } else {
-            launcher.launch();
+            Launcher.launch();
         }
     }
 }

@@ -8,7 +8,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import javax.swing.JFrame;
 
-public class render {
+public class Render {
     public Array sprites;
 
     public static void makeJFrame(String title, int width, int height, boolean maximized) {
@@ -41,23 +41,23 @@ public class render {
         System.out.println(os.toByteArray());
     }
 
-    private static int[] findPixels(int gridSize, int tile) {
-        // idk i think this work
-        int tileSize = 16;
-        int col = 0;
-        int row = 0;
-        int[] output = new int[2];
-        for (int i = 0; i <= tile; i++) {
-            if (i > col * gridSize) {
-                col = +1;
-            }
-            if ((col + 1) * gridSize > tile - (col * gridSize) && tile - (col * gridSize) < gridSize) {
-                row = tile - (col * gridSize);
+    // private static int[] findPixels(int gridSize, int tile) {
+    //     // idk i think this work
+    //     int tileSize = 16;
+    //     int col = 0;
+    //     int row = 0;
+    //     int[] output = new int[2];
+    //     for (int i = 0; i <= tile; i++) {
+    //         if (i > col * gridSize) {
+    //             col = +1;
+    //         }
+    //         if ((col + 1) * gridSize > tile - (col * gridSize) && tile - (col * gridSize) < gridSize) {
+    //             row = tile - (col * gridSize);
 
-            }
-        }
-        output[1] = col * tileSize;
-        output[2] = row * tileSize;
-        return output;
-    }
+    //         }
+    //     }
+    //     output[1] = col * tileSize;
+    //     output[2] = row * tileSize;
+    //     return output;
+    // }
 }

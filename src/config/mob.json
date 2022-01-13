@@ -1,11 +1,18 @@
 [
 	{
 		"name": "Zombie",
-		"type": 4,
+		"type": "undead",
 		"spawnRules": [],
-		"health": 4.5,
-		"spriteSheet": "path",
+		"health": 50,
+		"spriteSheet": "zombie",
 		"pos": 4,
-		"dropChance": 0.03
+		"dropChance": 0.03,
+		"difficulty": 1,
+		"floor,appearence": "graveyard",
+
+		"name": "skeleton",
+		"type":"undead",
+		"spawnRules": ["must spawn near gravestones"],
+		"health": 50
 	}
 ]
